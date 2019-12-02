@@ -11,7 +11,7 @@ public class ControladorAluno {
 	public ControladorAluno() {
 		listaAlunos = new ArrayList<>();
 	}
-	/*ADICIONANDO UMA REFERÊNCIA DO OBJETO ALUNO QUE ESTÁ NA CLASSE EXECUCAO NA LISTA DE ALUNOS*/
+	/*ADICIONANDO UMA REFERï¿½NCIA DO OBJETO ALUNO QUE ESTï¿½ NA CLASSE EXECUCAO NA LISTA DE ALUNOS*/
 	public void cadastrarAluno(Aluno aluno) {
 		listaAlunos.add(aluno);
 		System.out.println("Aluno cadastrado com sucesso!");
@@ -23,8 +23,10 @@ public class ControladorAluno {
 			System.out.println(aluno.getNome());
 			System.out.println(aluno.getCpf());
 			System.out.println("Rg: " + aluno.getRg());
-			System.out.println("Endereço: \nestado: " + aluno.getEndereco().getEstado() + "\nRua: " + aluno.getEndereco().getRua()
-					+ "\nCidade: " + aluno.getEndereco().getCidade() + "\nCep: " + aluno.getEndereco().getCep());
+			System.out.println("Endereï¿½o: \nestado: " + aluno.getEndereco().getEstado() 
+					+ "\nRua: " + aluno.getEndereco().getRua()
+					+ "\nCidade: " + aluno.getEndereco().getCidade() 
+					+ "\nCep: " + aluno.getEndereco().getCep());
 			System.out.println("Numero da casa: " + aluno.getEndereco().getNumero_casa());
 			System.out.println("---------------------------------");
 		}
@@ -32,7 +34,7 @@ public class ControladorAluno {
 
 	public void atualizarCadastro(String cpf, String novoNome) {
 		for(Aluno aluno: listaAlunos) {
-			/*ATUALIZANDO CADASTRO DE ALUNO QUANDO O CPF DIGITADO POR PARÂMETRO FOR O MESMO DE ALGUÉM QUE JÁ FOI CADASTRADO*/
+			/*ATUALIZANDO CADASTRO DE ALUNO QUANDO O CPF DIGITADO POR PARï¿½METRO FOR O MESMO DE ALGUï¿½M QUE Jï¿½ FOI CADASTRADO*/
 			if(aluno.getCpf().contains(cpf)) {
 				aluno.setNome(novoNome);	
 			}
