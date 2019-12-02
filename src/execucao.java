@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-import controlador.ControladorAluno;
+import controlador.ControleDoAluno;
 import modelo.Aluno;
 import modelo.Curso;
 import modelo.Endereco;
@@ -9,9 +9,9 @@ import modelo.Pessoa;
 
 public class execucao {
 	public static void main(String[] args) {
-		/*UTILIZANDO CONSTRUTOR QUE SÓ PEDE NÚMERO DA CASA E A RUA*/
+		/*UTILIZANDO CONSTRUTOR QUE Sï¿½ PEDE Nï¿½MERO DA CASA E A RUA*/
 		Endereco endereco1 = new Endereco(65, "Tabuleiro");
-		Endereco endereco2 = new Endereco(66, "Santa Lúcia");
+		Endereco endereco2 = new Endereco(66, "Santa Lï¿½cia");
 		Endereco endereco3 = new Endereco(67, "Ponta Verde ");
 		Endereco endereco4 = new Endereco(68, "Benedito Bentes");
 		Endereco endereco5 = new Endereco(69, "Vergel");
@@ -22,13 +22,13 @@ public class execucao {
 		Instrutor instrutor4 = new Instrutor("Gill", "123.456.789-11","3216589-8", endereco4);
 		Instrutor instrutor5 = new Instrutor("Lidiane", "456.654.987-98","1568749-2", endereco5);
 
-		Curso curso1 = new Curso(instrutor1, "Doméstica", 40);
-		Curso curso2 = new Curso(instrutor2, "Serviços gerais", 80);
+		Curso curso1 = new Curso(instrutor1, "Domï¿½stica", 40);
+		Curso curso2 = new Curso(instrutor2, "Serviï¿½os gerais", 80);
 		Curso curso3 = new Curso(instrutor3, "Aux. Cozinha", 80);
 		Curso curso4 = new Curso(instrutor4, "Cozinheira", 80);
 		Curso curso5 = new Curso(instrutor5, "Faxineira", 80);
 
-		/*VARIAVÉIS GLOBAIS*/
+		/*VARIAVï¿½IS GLOBAIS*/
 		String nome;
 		String cpf;
 		String rg;
@@ -66,7 +66,7 @@ public class execucao {
 
 		Scanner ler = new Scanner(System.in);
 
-		ControladorAluno controladorAluno = new ControladorAluno();
+		ControleDoAluno controladorAluno = new ControleDoAluno();
 
 		/*VARIAVEL LOCAL*/
 		Pessoa aluno;
@@ -90,7 +90,7 @@ public class execucao {
 				System.out.println("Informe seu cpf: ");
 				cpf = ler.nextLine();
 				while(controladorAluno.verificarCpfExiste(cpf)) {
-					System.out.println("Cpf já existente! Porfavor digite outro.");
+					System.out.println("Cpf jï¿½ existente! Porfavor digite outro.");
 					cpf = ler.nextLine();
 				}
 				System.out.println("Informe seu rg: ");
@@ -103,7 +103,7 @@ public class execucao {
 				cep = ler.nextLine();
 				System.out.println("Informe sua rua: ");
 				rua = ler.nextLine();
-				System.out.println("Informe o número da casa: ");
+				System.out.println("Informe o nï¿½mero da casa: ");
 				numero_casa = ler.nextInt();
 
 				/*VARIAVEL ALUNO VIRA UM OBJETO ALUNO POR SER INSTANCIADA E UTILIZANDO CONSTRUTOR*/
@@ -114,18 +114,18 @@ public class execucao {
 				controladorAluno.cadastrarAluno((Aluno)aluno);
 				System.out.println("Escolha seu curso");
 				System.out.println("###################CURSOS###################");
-				System.out.println("1: Doméstica");
-				System.out.println("2: Serviços gerais");
+				System.out.println("1: Domï¿½stica");
+				System.out.println("2: Serviï¿½os gerais");
 				System.out.println("3: Aux. cozinha");
 				System.out.println("4: Cozinheira");
 				System.out.println("5: Faxineira");
-				System.out.println("6: Informações de cursos");
+				System.out.println("6: Informaï¿½ï¿½es de cursos");
 				opcao_cursos = ler.nextInt();
 				if(opcao_cursos == 1) {
-					System.out.println("Curso escolhido: Doméstica");
+					System.out.println("Curso escolhido: Domï¿½stica");
 				}
 				if(opcao_cursos == 2) {
-					System.out.println("Curso escolhido: Serviços gerais");
+					System.out.println("Curso escolhido: Serviï¿½os gerais");
 				}
 				if(opcao_cursos == 3) {
 					System.out.println("Curso escolhido: Aux. cozinha");
@@ -142,27 +142,28 @@ public class execucao {
 							disciplinaCurso1  + " -> " + cargaHorariaCurso1 + " " + " \n"
 							+ " Instrutor: " + nomeInstrutorCurso2 + ": " + disciplinaCurso2 + " -> "
 							+ " " + cargaHorariaCurso2 + " \n Instrutor: "
-							+ nomeInstrutorCurso3 + ": " + disciplinaCurso3 + " -> " + cargaHorariaCurso3 + " -> " + " \n Instrutor: " + nomeInstrutorCurso4 + ": " +
-							disciplinaCurso4 + " -> " + cargaHorariaCurso4 + " " + " \n Instrutor: " + nomeInstrutorCurso5
-							+ ": " + disciplinaCurso5 + " -> " + cargaHorariaCurso5);
+							+ nomeInstrutorCurso3 + ": " + disciplinaCurso3 + " -> " 
+							+ cargaHorariaCurso3 + " -> " + " \n Instrutor: " + nomeInstrutorCurso4 + ": " 
+							+ disciplinaCurso4 + " -> " + cargaHorariaCurso4 + " " + " \n Instrutor: " 
+							+ nomeInstrutorCurso5 + ": " + disciplinaCurso5 + " -> " + cargaHorariaCurso5);
 				}
 
 				break;
 			case 2:
-				System.out.println("Atualização de cadastro");
-				System.out.println("Digite o cpf do aluno que você deseja atualizar:");
+				System.out.println("Atualizaï¿½ï¿½o de cadastro");
+				System.out.println("Digite o cpf do aluno que vocï¿½ deseja atualizar:");
 				cpf = ler.nextLine();
 				System.out.println("Digite o nome do novo aluno:");
 				novoNome = ler.nextLine();
 				controladorAluno.atualizarCadastro(cpf, novoNome);
 				break;
 			case 3:
-				System.out.println("Digite o cpf do aluno que você deseja deletar:");
+				System.out.println("Digite o cpf do aluno que vocï¿½ deseja deletar:");
 				cpf = ler.nextLine();
 				controladorAluno.deletarAluno(cpf);
 				break;
 			case 4:
-				System.out.println("Digite o cpf do aluno que você deseja buscar:");
+				System.out.println("Digite o cpf do aluno que vocï¿½ deseja buscar:");
 				cpf = ler.nextLine();
 				controladorAluno.buscarAluno(cpf);
 				break;

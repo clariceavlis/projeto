@@ -4,11 +4,11 @@ import java.util.ArrayList;
 
 import modelo.Aluno;
 
-public class ControladorAluno {
+public class ControleDoAluno {
 	/*Criando o ArrayList (lista) de alunos*/
 	ArrayList<Aluno> listaAlunos;
 
-	public ControladorAluno() {
+	public ControleDoAluno() {
 		listaAlunos = new ArrayList<>();
 	}
 	/*ADICIONANDO UMA REFER�NCIA DO OBJETO ALUNO QUE EST� NA CLASSE EXECUCAO NA LISTA DE ALUNOS*/
